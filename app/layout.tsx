@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "../styles/globals.css";
 import {
   ClerkProvider,
@@ -9,16 +8,7 @@ import {
   SignedOut,
   UserButton,
 } from "@clerk/nextjs";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { Inter } from "@/config/fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -36,10 +26,9 @@ export default function RootLayout({
         cssLayerName: "clerk",
       }}
     >
-      <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
+      <html lang="pl" className={`${Inter.variable}`}>
+        <p className="font-bold">PlayStack</p>
+        <body>
           <header className="flex justify-end items-center p-4 gap-4 h-16">
             <SignedOut>
               <SignInButton />

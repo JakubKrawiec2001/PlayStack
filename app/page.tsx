@@ -1,7 +1,9 @@
 export default function Home() {
   return (
     <div>
-      <h1>PlayStack</h1>
+      <p className="font-bold">PlayStack</p>
+      <p className="font-extrabold">PlayStack</p>
+      <p className="font-normal">PlayStack</p>
     </div>
   );
 }
