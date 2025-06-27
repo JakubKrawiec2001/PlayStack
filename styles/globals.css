@@ -6,10 +6,20 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-custom-green: var(--playstack-green)
+  --color-custom-blue: var(--playstack-blue);
+  --color-custom-dark-blue: var(--playstack-dark-blue);
+  --color-custom-white: var(--playstack-white);
+  --color-custom-dark-900: var(--playstack-dark-900);
+  --color-custom-dark-800: var(--playstack-dark-800); 
+  --color-custom-dark-700: var(--playstack-dark-700);
+  --color-custom-red: var(--playstack-red);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -39,6 +49,7 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -46,6 +57,16 @@
 }
 
 :root {
+
+  --playstack-green: #2DAB7D;
+  --playstack-blue: #00819E;
+  --playstack-dark-blue: #052535;
+  --playstack-white: #F1F1E6;
+  --playstack-dark-900: #171D25;
+  --playstack-dark-800: #24282F;
+  --playstack-dark-700: #2B3139;
+  --playstack-red: #FF0033;
+ 
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.13 0.028 261.692);
