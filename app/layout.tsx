@@ -26,9 +26,8 @@ export default function RootLayout({
         cssLayerName: "clerk",
       }}
     >
-      <html lang="pl" className={`${Inter.variable}`}>
-        <p className="font-bold">PlayStack</p>
-        <body>
+      <html lang="pl" className={`${Inter.variable}`} suppressHydrationWarning>
+        <body className="antialiased">
           <header className="flex justify-end items-center p-4 gap-4 h-16">
             <SignedOut>
               <SignInButton />
