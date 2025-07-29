@@ -6,13 +6,14 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-custom-green: var(--playstack-green)
+  --color-custom-green: var(--playstack-green);
   --color-custom-blue: var(--playstack-blue);
   --color-custom-dark-blue: var(--playstack-dark-blue);
   --color-custom-white: var(--playstack-white);
   --color-custom-dark-900: var(--playstack-dark-900);
-  --color-custom-dark-800: var(--playstack-dark-800); 
+  --color-custom-dark-800: var(--playstack-dark-800);
   --color-custom-dark-700: var(--playstack-dark-700);
+  --color-custom-dark-600: var(--playstack-dark-600);
   --color-custom-red: var(--playstack-red);
 
   --color-background: var(--background);
@@ -54,18 +55,18 @@
 }
 
 :root {
-
-  --playstack-green: #2DAB7D;
-  --playstack-blue: #00819E;
+  --playstack-green: #2dab7d;
+  --playstack-blue: #00819e;
   --playstack-dark-blue: #052535;
-  --playstack-white: #F1F1E6;
-  --playstack-dark-900: #171D25;
-  --playstack-dark-800: #24282F;
-  --playstack-dark-700: #2B3139;
-  --playstack-red: #FF0033;
+  --playstack-white: #f1f1e6;
+  --playstack-dark-900: #101014;
+  --playstack-dark-800: #171d25;
+  --playstack-dark-700: #24282f;
+  --playstack-dark-600: #2b3139;
+  --playstack-red: #ff0033;
 
-  --font-inter: 'Inter', sans-serif;
- 
+  --font-inter: "Inter", sans-serif;
+
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.13 0.028 261.692);
@@ -142,4 +143,8 @@
     @apply bg-background text-foreground;
     font-family: var(--font-inter);
   }
+}
+
+@utility container {
+  margin-inline: auto;
 }
