@@ -6,7 +6,11 @@ export const HeaderNavigation = () => {
   return (
     <div className="flex items-center gap-4 text-custom-white">
       {navLinks.map((item) => (
-        <Link key={item.id} href={item.href} className="text-custom-white">
+        <Link
+          key={item.id}
+          href={item.href}
+          className="text-custom-white font-light"
+        >
           {item.label}
         </Link>
       ))}
