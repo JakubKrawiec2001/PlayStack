@@ -21,10 +21,6 @@ export const HeaderCta = () => {
           </Button>
         </SignUpButton>
       </SignedOut>
-
-      <Button variant="gradient" size="wide">
-        Test
-      </Button>
     </div>
   );
 };

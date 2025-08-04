@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import React from "react";
 
-export const HeaderContainer = ({
+export const SidebarContent = ({
   children,
   customClassName,
 }: {
@@ -9,10 +9,10 @@ export const HeaderContainer = ({
   customClassName?: string;
 }) => {
   return (
-    <header
-      className={cn(`border-b-1 border-custom-dark-700`, customClassName)}
+    <div
+      className={cn(`flex flex-col justify-between flex-1`, customClassName)}
     >
       {children}
-    </header>
+    </div>
   );
 };
