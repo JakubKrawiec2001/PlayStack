@@ -9,9 +9,7 @@ export const HeaderContainer = ({
   customClassName?: string;
 }) => {
   return (
-    <header
-      className={cn(`border-b-1 border-custom-dark-700`, customClassName)}
-    >
+    <header className={cn(`container sticky top-8`, customClassName)}>
       {children}
     </header>
   );

@@ -9,8 +9,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default:
-          "bg-custom-blue text-custom-white  hover:bg-primary/90 cursor-pointer",
+        default: "bg-custom-blue text-custom-white hover:bg-custom-blue/70",
         destructive:
           "bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
         outline:
@@ -22,15 +21,15 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         gradient:
           "bg-gradient-to-b from-custom-dark-900 to-custom-dark-600 border-1 border-custom-dark-600 text-custom-white hover:from-custom-dark-600",
-        dark: "bg-custom-dark-700 border-1 border-custom-dark-600 text-custom-white hover:bg-custom-dark-600",
+        icon: "bg-transparent text-custom-white hover:bg-custom-dark-600",
       },
       size: {
-        default: "h-11 px-5 py-2 rounded-sm",
-        sm: "h-10 rounded-sm px-4 py-2",
-        lg: "h-12 rounded-sm px-8",
-        smIcon: "h-10 w-10 rounded-sm",
-        lgIcon: "h-12 w-12 rounded-sm",
-        wide: "h-12 py-4 px-10 rounded-sm",
+        default: "h-11 px-5 py-2 rounded-md",
+        sm: "h-10 rounded-md px-4 py-2",
+        lg: "h-12 rounded-md px-8",
+        smIcon: "h-10 w-10 rounded-md",
+        lgIcon: "h-12 w-12 rounded-md",
+        wide: "h-12 py-4 px-10 rounded-md",
       },
     },
     defaultVariants: {

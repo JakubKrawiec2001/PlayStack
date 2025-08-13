@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
-import { Inter } from "@/config/fonts";
+import { Poppins } from "@/config/fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +19,11 @@ export default function AppLayout({
         cssLayerName: "clerk",
       }}
     >
-      <html lang="pl" className={`${Inter.variable}`} suppressHydrationWarning>
+      <html
+        lang="pl"
+        className={`${Poppins.variable}`}
+        suppressHydrationWarning
+      >
         <body className="antialiased bg-custom-dark-900">{children}</body>
       </html>
     </ClerkProvider>

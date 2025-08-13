@@ -8,12 +8,11 @@
 @theme inline {
   --color-custom-green: var(--playstack-green);
   --color-custom-blue: var(--playstack-blue);
-  --color-custom-dark-blue: var(--playstack-dark-blue);
   --color-custom-white: var(--playstack-white);
-  --color-custom-dark-900: var(--playstack-dark-900);
-  --color-custom-dark-800: var(--playstack-dark-800);
+  --color-custom-dark-900: var(--playstack-dark-900); /* Main background */
+  --color-custom-dark-800: var(--playstack-dark-800); /* Secondary background */
   --color-custom-dark-700: var(--playstack-dark-700);
-  --color-custom-dark-600: var(--playstack-dark-600);
+  --color-custom-dark-600: var(--playstack-dark-600); /* hover */
   --color-custom-red: var(--playstack-red);
 
   --color-background: var(--background);
@@ -56,13 +55,12 @@
 
 :root {
   --playstack-green: #2dab7d;
-  --playstack-blue: #00819e;
-  --playstack-dark-blue: #052535;
+  --playstack-blue: #3868f3;
   --playstack-white: #f1f1e6;
-  --playstack-dark-900: #101014;
-  --playstack-dark-800: #171d25;
-  --playstack-dark-700: #24282f;
-  --playstack-dark-600: #2b3139;
+  --playstack-dark-900: #111111;
+  --playstack-dark-800: #1d1f20;
+  --playstack-dark-700: #27292d;
+  --playstack-dark-600: #2a2e31;
   --playstack-red: #ff0033;
 
   --font-inter: "Inter", sans-serif;
@@ -141,7 +139,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: var(--font-inter);
+    font-family: var(--font-poppins);
   }
 
   p {
@@ -151,5 +149,11 @@
 
 @utility container {
   margin-inline: auto;
-  padding-inline: 0.5rem;
+  padding-inline: 2rem;
+}
+
+@utility flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

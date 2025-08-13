@@ -1,48 +1,48 @@
 import localFont from "next/font/local";
 
-export const Inter = localFont({
+export const Poppins = localFont({
   src: [
     {
-      path: "../assets/fonts/Inter-Thin.woff2",
+      path: "../assets/fonts/Poppins-Thin.ttf",
       weight: "100",
       style: "normal",
     },
     {
-      path: "../assets/fonts/Inter-ExtraLight.woff2",
+      path: "../assets/fonts/Poppins-ExtraLight.ttf",
       weight: "200",
       style: "normal",
     },
     {
-      path: "../assets/fonts/Inter-Light.woff2",
+      path: "../assets/fonts/Poppins-Light.ttf",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../assets/fonts/Inter-Regular.woff2",
+      path: "../assets/fonts/Poppins-Regular.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../assets/fonts/Inter-Medium.woff2",
+      path: "../assets/fonts/Poppins-Medium.ttf",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../assets/fonts/Inter-SemiBold.woff2",
+      path: "../assets/fonts/Poppins-SemiBold.ttf",
       weight: "600",
       style: "normal",
     },
     {
-      path: "../assets/fonts/Inter-Bold.woff2",
+      path: "../assets/fonts/Poppins-Bold.ttf",
       weight: "700",
       style: "normal",
     },
     {
-      path: "../assets/fonts/Inter-ExtraBold.woff2",
+      path: "../assets/fonts/Poppins-ExtraBold.ttf",
       weight: "800",
       style: "normal",
     },
   ],
-  variable: "--font-inter",
+  variable: "--font-poppins",
   display: "swap",
 });

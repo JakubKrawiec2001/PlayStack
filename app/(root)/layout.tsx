@@ -1,5 +1,4 @@
 import { HeaderMain } from "@/components/header/header-main";
-import { Sidebar } from "@/components/sidebar/sidebar";
 
 export default function RootLayout({
   children,
@@ -7,12 +6,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex">
-      <Sidebar />
-      <div className="w-full">
-        <HeaderMain />
-        <main>{children}</main>
-      </div>
-    </div>
+    <>
+      <HeaderMain />
+      <main className="pt-16 pb-8">{children}</main>
+    </>
   );
 }
