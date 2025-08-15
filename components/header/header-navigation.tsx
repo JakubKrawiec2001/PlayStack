@@ -9,7 +9,7 @@ import React from "react";
 export const HeaderNavigation = () => {
   const pathname = usePathname();
   return (
-    <div className="flex-center gap-8">
+    <div className="hidden lg:flex-center gap-8">
       {navLinks.map((item) => {
         const isActive =
           pathname === item.path || pathname.startsWith(`${item.path}/`);

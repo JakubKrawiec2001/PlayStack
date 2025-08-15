@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "@/assets/icons/logo2.svg";
+import Logo from "@/assets/icons/logo.svg";
 
 export const HeaderLogo = () => {
   return (

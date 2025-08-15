@@ -1,15 +1,22 @@
 import React from "react";
 import { Button } from "../ui/button";
-import { SignedOut, SignUpButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
+import User from "@/assets/icons/user.svg";
+import { UserInfo } from "../UserInfo";
 
 export const HeaderCta = () => {
   return (
-    <SignedOut>
-      <SignUpButton>
-        <Button size="lg" variant="default">
-          Sign In
-        </Button>
-      </SignUpButton>
-    </SignedOut>
+    <>
+      <SignedOut>
+        <SignInButton>
+          <Button size="lgIcon" variant="icon">
+            <User className="size-6" />
+          </Button>
+        </SignInButton>
+      </SignedOut>
+      <SignedIn>
+        <UserInfo />
+      </SignedIn>
+    </>
   );
 };
