@@ -15,7 +15,9 @@ export const HeaderCta = () => {
         </SignInButton>
       </SignedOut>
       <SignedIn>
-        <UserInfo />
+        <Button size="lgIcon" variant="icon">
+          <UserInfo />
+        </Button>
       </SignedIn>
     </>
   );

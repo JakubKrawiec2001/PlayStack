@@ -15,7 +15,7 @@ export const HeaderMain = () => {
         <HeaderLogo />
         <HeaderNavigation />
       </div>
-      <div className="hidden lg:flex items-center gap-3">
+      <div className="hidden lg:flex items-center gap-2">
         <Button size="lgIcon" variant="icon">
           <Gamepad className="size-6" />
         </Button>

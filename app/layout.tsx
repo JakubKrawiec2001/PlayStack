@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "../styles/globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Poppins } from "@/config/fonts";
+import { QueryProvider } from "@/services/providers/query-provider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,13 +20,15 @@ export default function AppLayout({
         cssLayerName: "clerk",
       }}
     >
-      <html
-        lang="pl"
-        className={`${Poppins.variable}`}
-        suppressHydrationWarning
-      >
-        <body className="antialiased bg-custom-dark-900">{children}</body>
-      </html>
+      <QueryProvider>
+        <html
+          lang="pl"
+          className={`${Poppins.variable}`}
+          suppressHydrationWarning
+        >
+          <body className="antialiased bg-custom-dark-900">{children}</body>
+        </html>
+      </QueryProvider>
     </ClerkProvider>
   );
 }
