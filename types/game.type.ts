@@ -1,8 +1,5 @@
-import { GAMES_FILTERS } from "@/data/igdb-filters";
-
 export type GameType = {
   id: number;
-  category: number;
   cover: number;
   created_at: number;
   game_engines: number[];
@@ -23,6 +20,39 @@ export type GameType = {
   videos: number[];
   checksum: string;
   game_type: number;
+  age_ratings?: number[];
+  aggregated_rating?: number;
+  aggregated_rating_count?: number;
+  alternative_names?: number[];
+  artworks?: number[];
+  bundles?: number[];
+  collections?: number[];
+  dlcs?: number[];
+  expanded_games?: number[];
+  expansions?: number[];
+  external_games?: number[];
+  first_release_date?: number;
+  forks?: number[];
+  franchise?: number;
+  franchises?: number[];
+  game_localizations?: number[];
+  game_status?: number;
+  hypes?: number;
+  keywords?: number[];
+  language_supports?: number[];
+  multiplayer_modes?: number[];
+  ports?: number[];
+  rating?: number;
+  rating_count?: number;
+  remakes?: number[];
+  remasters?: number[];
+  similar_games?: number[];
+  standalone_expansions?: number[];
+  storyline?: string;
+  tags?: number[];
+  total_rating?: number;
+  total_rating_count?: number;
+  version_parent?: number;
+  version_title?: string;
+  websites?: number[];
 };
-
-export type GamesFiltersType = (typeof GAMES_FILTERS)[number];

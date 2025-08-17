@@ -1,9 +1,12 @@
-import { GamesFiltersType } from "./game.type";
-
-export type IgdbFiltersType = GamesFiltersType;
+export type IgdbFiltersType = {
+  where?: string;
+  sort?: string;
+  search?: string;
+  limit?: number;
+};
 
 export type IgdbApiRequestType = {
   path: string;
   method?: "GET" | "POST" | "PUT" | "DELETE";
-  filters?: IgdbFiltersType | IgdbFiltersType[];
+  filters?: IgdbFiltersType;
 };

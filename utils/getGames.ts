@@ -1,11 +1,9 @@
 "use server";
 
 import { fetchFromIgdbApi } from "@/services/igdb";
-import { GamesFiltersType } from "@/types/game.type";
+import { IgdbFiltersType } from "@/types/igdb.type";
 
-export const getGames = async (
-  filters?: GamesFiltersType | GamesFiltersType[]
-) =>
+export const getGames = async (filters?: IgdbFiltersType) =>
   fetchFromIgdbApi({
     path: "/games",
     filters,

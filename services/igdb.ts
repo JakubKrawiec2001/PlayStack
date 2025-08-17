@@ -2,8 +2,14 @@
 
 import { IgdbApiRequestType, IgdbFiltersType } from "@/types/igdb.type";
 
-const handleFieldsArray = (f?: IgdbFiltersType | IgdbFiltersType[]) => {
-  return Array.isArray(f) ? f.join(",") : f || "*";
+const buildBody = (q: IgdbFiltersType = {}) => {
+  const parts: string[] = [];
+  parts.push("fields *;");
+  if (q.search) parts.push(`search "${q.search}";`);
+  if (q.where) parts.push(`where ${q.where};`);
+  if (q.sort) parts.push(`sort ${q.sort};`);
+  if (q.limit) parts.push(`limit ${q.limit};`);
+  return parts.join(" ");
 };
 
 const headers = {
@@ -17,13 +23,11 @@ export async function fetchFromIgdbApi({
   method = "POST",
   filters,
 }: IgdbApiRequestType) {
-  const body = "fields " + handleFieldsArray(filters) + ";";
-
   try {
     const response = await fetch(`${process.env.IGDB_BASE_URL}${path}`, {
       method: method,
       headers: headers,
-      body: body,
+      body: buildBody(filters),
       next: {
         revalidate: 3600,
       },
