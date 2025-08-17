@@ -12,7 +12,7 @@ function makeQueryClient() {
   return new QueryClient({
     defaultOptions: {
       queries: {
-        staleTime: 24 * 60 * 60 * 1000,
+        staleTime: 60 * 1000,
         refetchOnMount: false,
         refetchOnWindowFocus: false,
         refetchOnReconnect: false,
@@ -39,7 +39,7 @@ export const QueryProvider = ({ children }: { children: JSX.Element }) => {
   return (
     <QueryClientProvider client={queryClient}>
       {children}
-      <ReactQueryDevtools initialIsOpen={false} buttonPosition="bottom-right" />
+      <ReactQueryDevtools buttonPosition="bottom-right" />
     </QueryClientProvider>
   );
 };

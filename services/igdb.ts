@@ -1,26 +1,42 @@
-/* TODO:
-    - Create igdb config file
-    - Example fetch below
-*/
+"use server";
 
-export const fetchGameData = async () => {
+import { IgdbApiRequestType, IgdbFiltersType } from "@/types/igdb.type";
+
+const handleFieldsArray = (f?: IgdbFiltersType | IgdbFiltersType[]) => {
+  return Array.isArray(f) ? f.join(",") : f || "*";
+};
+
+const headers = {
+  Accept: "application/json",
+  "Client-ID": `${process.env.IGDB_CLIENT_ID}`,
+  Authorization: `Bearer ${process.env.IGDB_ACCESS_TOKEN}`,
+};
+
+export async function fetchFromIgdbApi({
+  path,
+  method = "POST",
+  filters,
+}: IgdbApiRequestType) {
+  const body = "fields " + handleFieldsArray(filters) + ";";
+
   try {
-    const response = await fetch("https://api.igdb.com/v4/games", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Client-ID": `${process.env.IDGB_CLIENT_ID}`,
-        Authorization: `Bearer ${process.env.IGDB_ACCESS_TOKEN}`,
+    const response = await fetch(`${process.env.IGDB_BASE_URL}${path}`, {
+      method: method,
+      headers: headers,
+      body: body,
+      next: {
+        revalidate: 3600,
       },
-      body: "fields *;",
     });
 
-    if (!response) return;
+    if (!response.ok) {
+      throw new Error("Error fetching data from IGDB API");
+    }
 
-    const data = response.json();
+    const data = await response.json();
 
     return data;
   } catch (error) {
-    console.log(console.log(error));
+    console.error("Error fetching data from IGDB API:", error);
   }
-};
+}
